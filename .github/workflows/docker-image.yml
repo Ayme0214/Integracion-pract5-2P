@@ -40,10 +40,10 @@ jobs:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker build -t ayme0214/practica5_2p:$NEW_VERSION .
-        docker build -t ayme0214/practica5_2p:latest .
+        docker build -t ayme0214/practica5_2p:1.0.1.1 .
     - name: Push Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push ayme0214/practica5_2p:$NEW_VERSION
-        docker push ayme0214/practica5_2p:latest
+        docker push ayme0214/practica5_2p:1.0.1.1
